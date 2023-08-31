@@ -1,11 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import FormToDo from './componets/FormToDo/FormToDo';
+import ToDo from './componets/ToDo/ToDo';
+import ToDoList from './componets/ToDoList/ToDoList';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -16,8 +19,9 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
       </header>
+      <ToDoList />
     </div>
   );
 }
