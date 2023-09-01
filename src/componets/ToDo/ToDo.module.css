@@ -42,10 +42,10 @@
         }
 
 
-   input[type=checkbox] {
+.check_input input[type=checkbox] {
         visibility: hidden;
     }
 
-input[type=checkbox]:checked + label:after {
+.check_input input[type=checkbox]:checked + label:after {
             opacity: 1;
         }

@@ -9,12 +9,12 @@ function ToDo({ todo, handleDelete, handleCheckCompleted }) {
                 <div className={css.check_input}>
                     <input
                         className={css.form_check_input}
-
+                        id='form_check_input'
                         // value="None"
                         type='checkbox'
                         checked={todo.completed}
                         onChange={() => handleCheckCompleted(todo.id)} />
-                    <label></label>
+                    <label htmlFor='form_check_input'></label>
                 </div>
                 <h2> {todo.title}</h2>
 
@@ -30,7 +30,7 @@ function ToDo({ todo, handleDelete, handleCheckCompleted }) {
                     )}
                 </div>
             </div>
-        </li>
+        </li >
     )
 }
 
