@@ -1,18 +1,23 @@
 import React from 'react'
+import css from './ToDo.module.css'
 
 
-const ToDo = ({ todo, handleDelete }) => {
+function ToDo({ todo, handleDelete, handleCheckCompleted }) {
     return (
         <li className='list-group-item'>
             <div className='row justify-content-between'>
-                <div className='col-10'>
+                <div className={css.check_input}>
                     <input
-                        className='form-check-input me-2'
-                        type='checkbox'
-                    />
+                        className={css.form_check_input}
 
-                    <h2> {todo.title}</h2>
+                        // value="None"
+                        type='checkbox'
+                        checked={todo.completed}
+                        onChange={() => handleCheckCompleted(todo.id)} />
+                    <label></label>
                 </div>
+                <h2> {todo.title}</h2>
+
                 <div className='col'>
                     {handleDelete && (
                         <button

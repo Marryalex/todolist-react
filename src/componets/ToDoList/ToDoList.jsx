@@ -88,7 +88,7 @@ class ToDoList extends Component {
                 )}
                 <FormToDo addToDo={this.addToDo} />
                 {this.state.todoList && (
-                    <ul className='list-group list-group-flush'>
+                    <ul className='list-group'>
                         {this.state.todoList.map((todo) => (
                             <ToDo
                                 key={todo.id}
