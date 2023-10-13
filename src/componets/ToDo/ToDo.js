@@ -30,7 +30,7 @@ function ToDo({ todo, handleDelete, handleCheckCompleted }) {
                     )}
                 </div>
             </div>
-        </li >
+        </li>
     )
 }
 
