@@ -2,6 +2,7 @@ import { Component } from 'react'
 import ToDo from '../ToDo/ToDo'
 import FormToDo from '../FormToDo/FormToDo'
 import { nanoid } from 'nanoid'
+import css from './ToDoList.module.css'
 
 
 
@@ -74,8 +75,11 @@ class ToDoList extends Component {
 
     render() {
         return (
-            <>
-                <h1>My To-Do list</h1>
+            <div className={css.todo_list}>
+                <h1 className={css.todo_title}>
+                    My To-Do list
+                    <span className={css.todo_title_text}>Get things done, one item at a time.</span>
+                </h1>
                 {this.state.isDelete && (
                     <div className='alert alert-danger' role='alert'>
                         To-do delete successfully!
@@ -99,7 +103,7 @@ class ToDoList extends Component {
                         ))}
                     </ul>
                 )}
-            </>
+            </div>
         )
     }
 }
