@@ -1,11 +1,17 @@
-
+.list_group_item{
+        display: flex;
+            margin: 0;
+            padding: 10px;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(177, 163, 163, 0.1);
+}
 .check_input {
     width: 28px;
     height: 28px;
     position: relative;
     margin: 20px auto;
-    /* background: #fcfff4; */
-    background: red;
+
     border-radius: 50px;
     box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
@@ -17,7 +23,7 @@
         top: 4px;
         left: 4px;
         cursor: pointer;
-        background: green;
+        background: #696969;
         border-radius: 50px;
         box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 1);
 }

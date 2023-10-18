@@ -1,8 +1,11 @@
-@keyframes {
-    0%{
+
+
+
+@keyframes slidein{
+   from {
         transform:rotateX(60deg) rotateY(-10deg) rotate(60deg) scale(1.05);
     }
-     100%{
+     to {
         transform:rotateX(0deg) rotateY(0deg) rotate(0deg) scale(0.9);
      }
 
@@ -16,12 +19,8 @@
         background: #ffebcd;
         color: #696969;
         box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, .1);
-        
+        animation: 2s slidein;
       
-        /* transform:rotateX(60deg) rotateY(-10deg) rotate(60deg) scale(1.05);   */
-        animation: 2s ease-in;
-        animation-fill-mode: forwards;
-        /* transform:translate(rotateX(0deg) rotateY(0deg) rotate(0deg) scale(0.9)); */
 }
 .todo_title{
 font-weight: normal;
@@ -35,4 +34,9 @@ font-weight: normal;
         margin-bottom: 0.7rem;
         margin-left: 3px;
         margin-top: 0.2rem;
+}
+.list_group{
+    margin:10px 0px;
+    padding: 0;
+
 }

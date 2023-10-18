@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import css from './FormToDo.module.css'
 
 class FormToDo extends Component {
     state = {
@@ -19,21 +20,21 @@ class FormToDo extends Component {
     }
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <div className='form-create'>
-                    <label htmlFor='exampleInput' className='form-label'>
-                        Create to-do
-                    </label>
-                    <input
-                        name='todo'
-                        type='text'
-                        className='form-control'
-                        id='exampleInput'
-                        onChange={this.handleChange}
-                        value={this.state.todo}
-                    />
-                </div>
-                <button type='submit' className='btn btn-primary'>
+            <form onSubmit={this.handleSubmit} className={css.form_create}>
+
+                <label htmlFor='exampleInput' className={css.form_label}>
+                    Create to-do
+                </label>
+                <input
+                    name='todo'
+                    type='text'
+                    className={css.form_control}
+                    id='exampleInput'
+                    onChange={this.handleChange}
+                    value={this.state.todo}
+                />
+
+                <button type='submit' className={css.btn}>
                     Add to-do
                 </button>
             </form>
