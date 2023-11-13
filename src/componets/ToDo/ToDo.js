@@ -7,7 +7,7 @@ import { MdDeleteOutline } from "react-icons/md";
 function ToDo({ todo, handleDelete, handleCheckCompleted }) {
     return (
         <li className={css.list_group_item}>
-            <h2> {todo.title}</h2>
+            <h2 className={css.title}> {todo.title} </h2>
             <div className={css.check_input}>
                 <input
                     className={css.form_check_input}
@@ -26,11 +26,12 @@ function ToDo({ todo, handleDelete, handleCheckCompleted }) {
 
                     disabled={!todo.completed}
                     type='button'
-                    className='btn-close'
+                    className={css.btn_close}
                     aria-label='Close'
                     onClick={() => handleDelete(todo.id)}
                 >
-                    <MdDeleteOutline />
+                    <MdDeleteOutline size="30" />
+
                 </button>
             )}
 
